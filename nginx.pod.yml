@@ -1,0 +1,13 @@
+apiVersion: v1     #Kubernetes API version
+kind: Pod           #Type of kubernetes resource
+metadata:           #Metadata about the Pod
+  name: my-nginx
+  labels:
+    app: nginx
+    rel: stable
+spec:               #The spec/blueprint for the Pod
+  containers:       # Information about the containers that will run in the Pod
+  - name: my-nginx
+    image: nginx:alpine
+    ports:
+    - containerPort: 90
