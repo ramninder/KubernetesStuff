@@ -6,6 +6,7 @@ metadata:            # Metadata aboutmthe Deployment
     app: my-nginx
     tier: frontend
 spec:
+  replicas: 2
   selector:  # The selector is used to "select" the template to use(based on labels).
     matchLabels:
       tier: frontend
